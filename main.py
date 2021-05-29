@@ -23,6 +23,7 @@ parser.add_argument("--pw", type=str, required=False)
 # args = parser.parse_args()
 
 narg = parser.parse_args()
+#python main.py --method "reddit“ --user "" --pw "" --set-mining-timeout 180 --set-mining-cooldown 780
 
 @dataclasses.dataclass
 class Args:
