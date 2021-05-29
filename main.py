@@ -12,33 +12,16 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 # Parsing provided args
 parser = argparse.ArgumentParser()
-# parser.add_argument("--method", type=str, required=True)
+parser.add_argument("--method", type=str, required=True)
 parser.add_argument("--user", type=str, required=False)
 parser.add_argument("--pw", type=str, required=False)
-# parser.add_argument("--set-mining-timeout", type=int, dest="miningtimeout", required=False, default=300)
-# parser.add_argument("--set-mining-cooldown", type=int, dest="miningcooldown", required=False, default=300)
-# parser.add_argument("--debug", dest="debug", action="store_true")
-# parser.add_argument("--no-force-miner", dest="force_miner", action="store_false", default=True)
-# parser.add_argument("--mac", dest="mac", action="store_true", default=False)
-# args = parser.parse_args()
+parser.add_argument("--set-mining-timeout", type=int, dest="miningtimeout", required=False, default=300)
+parser.add_argument("--set-mining-cooldown", type=int, dest="miningcooldown", required=False, default=300)
+parser.add_argument("--debug", dest="debug", action="store_true")
+parser.add_argument("--no-force-miner", dest="force_miner", action="store_false", default=True)
+parser.add_argument("--mac", dest="mac", action="store_true", default=False)
+args = parser.parse_args()
 
-narg = parser.parse_args()
-#python main.py --method "reddit“ --user "" --pw "" --set-mining-timeout 180 --set-mining-cooldown 780
-
-@dataclasses.dataclass
-class Args:
-    user: str = narg.user
-    pw: str = narg.pw
-    method: str = "reddit"
-    miningtimeout: int = 180
-    miningcooldown: int = 780
-    debug: bool = False
-    force_miner: bool = True
-    mac: bool = False
-
-
-
-args = Args
 # Initializing logger
 process_uid = uuid.uuid4()
 logger = logging.getLogger(f"{process_uid}")

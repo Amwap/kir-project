@@ -1,6 +1,6 @@
+start python main.py --method "reddit" --user "nhuj997" --pw "2211334455!" --set-mining-timeout 180 --set-mining-cooldown 780
 timeout 3
-start python "C:\Release\main.py" --user "nhuj997" --pw "2211334455!"
+start python main.py --method "reddit" --user "nhuj997" --pw "2211334455!" --set-mining-timeout 180 --set-mining-cooldown 780
 timeout 3
-start python "C:\Release\main.py" --user "nhuj997" --pw "2211334455!"
-timeout 3
-start python "C:\Release\main.py" --user "nhuj997" --pw "2211334455!"
+start python main.py --method "reddit" --user "nhuj997" --pw "2211334455!" --set-mining-timeout 180 --set-mining-cooldown 780
+
